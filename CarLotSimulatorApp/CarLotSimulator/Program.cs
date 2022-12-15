@@ -26,6 +26,8 @@ namespace CarLotSimulator
                 isDrivable = true
         };
             carLot.CarsInLot.Add(car1);
+            Console.WriteLine($"Number of cars in lot: {CarLot.numberOfCars}");
+
 
             //dot notation
             Car car2 = new Car();
@@ -37,23 +39,30 @@ namespace CarLotSimulator
             car2.isDrivable = true;
 
             carLot.CarsInLot.Add(car2);
+            Console.WriteLine($"Number of cars in lot: {CarLot.numberOfCars}");
+
 
             //Custom Constructor
             Car car3 = new Car("Dodge","Ram 1500", 2008, "vroom", "very loud",true);
             carLot.CarsInLot.Add(car3);
+            Console.WriteLine($"Number of cars in lot: {CarLot.numberOfCars}");
+
 
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
-            foreach (var car in carLot.CarsInLot)
-            {
-                Console.WriteLine($"Car for sale: \n{car.Year} \n{car.Make} \n{car.Model}");
-                car.EngineNoiseMade(car.EngineNoise);
-                car.HonkNoiseMade(car.HonkNoise);
-            }
-            
+            //foreach (var car in carLot.CarsInLot)
+            //{
+            //    Console.WriteLine($"Car for sale: \n{car.Year} \n{car.Make} \n{car.Model}");
+            //    car.EngineNoiseMade(car.EngineNoise);
+            //    car.HonkNoiseMade(car.HonkNoise);
+                
+            //}
+
 
             
-            
-            
+
+
+
+
         }
     }
 }

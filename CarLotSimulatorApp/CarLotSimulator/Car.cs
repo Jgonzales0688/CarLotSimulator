@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,7 +13,7 @@ namespace CarLotSimulator
         //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable
         public Car()
         {
-
+            CarLot.numberOfCars++;
         }
 
         public Car(string make, string model, int year, string engineNoise, string honkNoise, bool IsDrivable)
@@ -23,6 +24,8 @@ namespace CarLotSimulator
             EngineNoise = engineNoise;
             HonkNoise = honkNoise;
             IsDrivable = isDrivable;
+
+            CarLot.numberOfCars++;
         }
 
         public string Make { get; set; }
@@ -44,10 +47,9 @@ namespace CarLotSimulator
         Console.WriteLine($"When you honk it is {noise}.\n");
         }
 
+       
 
         
 
-
-        
     }
 }
